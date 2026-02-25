@@ -1,0 +1,126 @@
+\documentclass[11pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[a4paper, margin=2cm]{geometry}
+\usepackage{parskip}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{textcomp}
+\usepackage{eurosym}
+\usepackage{setspace}
+
+\renewcommand*\familydefault{\sfdefault}
+\pagenumbering{gobble}
+
+\newcommand{\hint}[1]{{\footnotesize\color{gray}#1}}
+\renewcommand{\MakeTextField}[2]{{\vbox to #2{\vfill\hbox to #1{\hrulefill}}}}
+\newlength{\tfl}%
+\newcommand{\TextFieldFill}[2][]{%
+	\setlength{\tfl}{\linewidth}%
+	\settowidth{\dimen0}{#2}%
+	\addtolength{\tfl}{-\dimen0}%
+	\addtolength{\tfl}{-1em}%
+	\TextField[#1, bordercolor={}, backgroundcolor={}, width=\tfl]{#2}%
+}
+
+\begin{document}
+
+\textbf{\Large Antrag auf Fördermitgliedschaft im CoderDojo Schöneweide e.V.}
+
+\vspace{0.5cm}
+
+Der CoderDojo Schöneweide e.V. ist ein gemeinnütziger Verein, der Kindern und Jugendlichen einen spielerischen Einstieg in die Informatik ermöglicht. Fördermitglieder unterstützen unsere Arbeit finanziell, ohne sich aktiv in Vereinsaktivitäten engagieren zu müssen. Sie haben kein Stimmrecht bei Mitgliederversammlungen (§3 Abs. 5–7 der Satzung).
+
+
+Weitere Informationen:
+\begin{itemize}
+    \item Satzung: \url{https://coderdojo-schoeneweide.de/docs/verein/satzung.pdf}
+    \item Beitragsordnung: \url{https://coderdojo-schoeneweide.de/docs/verein/beitragsordnung.pdf}
+\end{itemize}
+
+
+\textbf{Angaben zur Person/Institution}
+
+\begin{minipage}{0.7\textwidth}
+   $\bigcirc$  \hint{Natürliche Person}
+   $\bigcirc$  \hint{Juristische Person} 
+\end{minipage}
+
+\vspace{0.3cm}
+
+\begin{minipage}{0.48\textwidth}
+    \TextFieldFill[name=vorname]{\hint{(Vorname)}}
+\end{minipage}
+\begin{minipage}{0.48\textwidth}
+    \TextFieldFill[name=nachname]{\hint{(Nachname)}}
+\end{minipage}
+
+\vspace{0.3cm}
+
+\begin{minipage}{0.48\textwidth}
+    \TextFieldFill[name=firmenname]{\hint{(Firmenname, falls zutreffend)}}
+\end{minipage}
+\begin{minipage}{0.48\textwidth}
+    \TextFieldFill[name=rechtsform]{\hint{(Rechtsform, z.B. GmbH)}}
+\end{minipage}
+
+\vspace{0.3cm}
+
+\TextFieldFill[]{\hint{(Anschrift: Straße, Hausnummer)}}
+
+\vspace{0.3cm}
+
+\TextFieldFill[]{\hint{(Anschrift: PLZ, Ort)}}
+
+\vspace{0.3cm}
+
+
+\TextFieldFill[name=email]{\hint{(E-Mail-Adresse)}}
+
+\vspace{0.3cm}
+
+\textbf{Förderbetrag}
+
+\TextFieldFill[name=foerderbetrag]{\hint{(Empfohlen: €60 (Privatpersonen), mind. €240 (Institutionen/Unternehmen))}} \euro
+
+\vspace{0.3cm}
+
+\textbf{Zustimmungen (erforderlich)}
+
+\begin{minipage}{\textwidth}
+    $\bigcirc$ \TextFieldFill[]{\hint{Ich stimme der Verarbeitung meiner Daten gemäß der Datenschutzvereinbarung zu.}}
+\end{minipage}
+
+\begin{minipage}{\textwidth}
+   $\bigcirc$ \TextFieldFill[]{\hint{Ich verpflichte mich, den Förderbetrag jährlich fristgerecht zu überweisen.}}
+\end{minipage}
+
+\begin{minipage}{\textwidth}
+   $\bigcirc$ \TextFieldFill[]{\hint{Ich habe die Satzung und Beitragsordnung zur Kenntnis genommen.}}
+\end{minipage}
+
+\vspace{0.3cm}
+
+\textbf{Datenschutzhinweis}
+
+{\footnotesize
+Ihre Angaben (insbesondere Vorname, Nachname, E-Mail-Adresse und Anschrift) werden digital für die Zwecke der Verwaltung der Fördermitgliedschaft verarbeitet. Weitere Informationen finden Sie unter \url{https://coderdojo-schoeneweide.de/de/datenschutz/}.
+}
+
+
+\textbf{Bankverbindung}
+
+Bitte überweisen Sie den Förderbetrag an:
+
+\textbf{IBAN:} DE83\,4306\,0967\,1323\,6039\,00 | \textbf{BIC:} GENODEM1GLS | \textbf{Bank:} GLS Bank Bochum
+
+\vspace{1.5cm}
+
+\begin{minipage}{\textwidth}
+   \hint{(Ort, Datum)} \hfill \hint{(Unterschrift)}
+\end{minipage}
+\end{document}
